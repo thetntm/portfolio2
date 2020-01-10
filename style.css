@@ -159,7 +159,7 @@ main
     {
         width: 93%;
     }
-    .basicDiv
+    .aboutMe
     {
         width: 93%;
     }
@@ -226,6 +226,7 @@ h2
     h2
     {
         font-size: 2.3rem;
+        margin: 0px;
     }
 }
 
@@ -236,4 +237,26 @@ h2
         width:68vw;
         height:68vw;
     }
+}
+
+.contactDiv
+{
+    margin-top: 30px;
+    border: 2px solid #9BA1F9;
+}
+
+.inputField
+{
+    width:100%;
+    border: 2px solid #9BA1F9;
+    color:#7FFFEB;
+    background: transparent;
+    padding: 5px 10px;
+}
+
+#contactSubmit
+{
+    background-color: transparent;
+    border: 2px solid #7FFFEB;
+    color: #FF4A18;
 }
