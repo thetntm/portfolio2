@@ -166,12 +166,15 @@ main
 h2
 {
     color: #7FFFEB;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .portCol
 {
-    min-width: 290px;
+    min-width: 230px;
     padding-bottom: 30px;
+    
 }
 
 .portItem
@@ -181,22 +184,29 @@ h2
     display:inline-block;
     position: relative;
     background-image: url(https://via.placeholder.com/260);
+    background-size: 100%;
 }
 
 .portItemText
 {
-    border-width: 3px;
-    border-style: solid none;
-    border-color: #9BA1F9;
-    border-radius: 2px;
     position:absolute;
-    bottom:20px;
+    bottom:10px;
     left:0px;
     width:100%;
     text-align: center;
     padding-top:20px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     color: #7FFFEB;
+}
+
+#youtubeItem
+{
+    background-image: url(./YoutubeMesh.png);
+}
+
+#twitchItem
+{
+    background-image: url(./TwitchMesh.png);
 }
 
 @media screen and (max-width: 375px)
