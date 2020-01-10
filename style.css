@@ -40,12 +40,14 @@ a:hover
     font-family: "retroFonts";
     padding:1rem;
     margin:1rem;
-    width:100%
+    width:100%;
 }
 
 .portDiv
 {
     padding: 30px;
+    margin: 0px;
+    margin-top: 2rem;
 }
 
 .color1
@@ -183,6 +185,8 @@ h2
     height: 260px;
     display:inline-block;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url(https://via.placeholder.com/260);
     background-size: 100%;
 }
