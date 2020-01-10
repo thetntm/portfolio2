@@ -40,6 +40,12 @@ a:hover
     font-family: "retroFonts";
     padding:1rem;
     margin:1rem;
+    width:100%
+}
+
+.portDiv
+{
+    padding: 30px;
 }
 
 .color1
@@ -149,6 +155,55 @@ main
 {
     .myFace
     {
-        width: 92%;
+        width: 93%;
+    }
+    .basicDiv
+    {
+        width: 93%;
+    }
+}
+
+h2
+{
+    color: #7FFFEB;
+}
+
+.portCol
+{
+    min-width: 290px;
+    padding-bottom: 30px;
+}
+
+.portItem
+{
+    width:260px;
+    height: 260px;
+    display:inline-block;
+    position: relative;
+    background-image: url(https://via.placeholder.com/260);
+}
+
+.portItemText
+{
+    border-width: 3px;
+    border-style: solid none;
+    border-color: #9BA1F9;
+    border-radius: 2px;
+    position:absolute;
+    bottom:20px;
+    left:0px;
+    width:100%;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+    color: #7FFFEB;
+}
+
+@media screen and (max-width: 375px)
+{
+    .portItem
+    {
+        width:68vw;
+        height:68vw;
     }
 }
