@@ -56,8 +56,20 @@ a:hover
 .menu
 {
     float:right;
-    margin: 29px;
-    margin-right: 0px;
+    margin-top:23px;
+    font-size:18px;
+}
+
+.bigHeader
+{
+    border-bottom: 2px solid #9BA1F9;
+    overflow: auto;
+}
+
+.smallHeader
+{
+    width : 80%;
+    margin: auto;
 }
 
 h1
@@ -68,10 +80,27 @@ h1
     font-size:60px;
 }
 
-@media screen and (max-width:480px)
+@media screen and (max-width:828px)
 {
     h1 {
-        font-size : 10vw;
+        display:block;
+        text-align:center;
+        margin:auto;
+    }
+    .menu
+    {
+        margin-top:0px;
+    }
+}
+
+@media screen and (max-width:510px)
+{
+    h1 {
+        font-size : 11.5vw;
+    }
+    .menu
+    {
+        font-size : 3.5vw;
     }
 }
 
