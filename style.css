@@ -9,10 +9,17 @@
     src: url(./KlaxonsBetterE.otf) format("opentype")
 }
 
+html,body
+{
+    min-height: 100vh;
+}
+
 body
 {
     background-color: #000B17;
     font-family: "retroFonts";
+    display:flex;
+    flex-direction: column;
 }
 
 a {
@@ -109,4 +116,17 @@ h1
     display:inline;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+main
+{
+    flex : 1 0 auto;
+
+}
+
+.footer
+{
+    flex-shrink: 0;
+    margin: 10px 0;
+    text-align: center;
 }
