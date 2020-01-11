@@ -16,20 +16,20 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Main Container-->
-    <div class="bigHeader">
+    <!--Main Header-->
+    <div id="bigHeader">
         <div class="smallHeader">
             <a href="index.html">
-                <h1 class = "color2">Michael Becker</h1>
+                <h1 class = "color1">Michael Becker</h1>
             </a>
-            <ul class = "menu color2">
+            <ul class = "menu color1">
                 
                 <li class = "menu-item" id="middle-menu-item">
                     <a href="./portfolio.html" class="unstyledLink">
                         Portfolio
                     </a>
                 </li>
-                <li class = "menu-item color1" id="final-menu-item">
+                <li class = "menu-item color2" id="final-menu-item">
                     <a href="./contact.html" class="unstyledLink">
                         Contact
                     </a>
@@ -39,9 +39,16 @@
         </div>
     </div>
 
+    <div id="particleParent">
+
+        <!--Background particles will (hopefully) appear here-->
+
+    </div>
+
+
     <!-- Main Content -->
-    <main>
-        <div class = "container">
+    <main id="mainContent">
+        <div class = "container" id = "contentContainer">
             <div class = "contactDiv">
                 <div class = "row">
                     <div class = "col-12">
@@ -51,7 +58,7 @@
                 <form action="">
                     <div class = "form-group row" style = "padding: 0px 30px; padding-top:30px;">
                         <div class = "col-sm-3 offset-md-1">
-                            <label for="name" class = "color1">Name</label>
+                            <label for="name" class = "color2">Name</label>
                         </div>
                         <div class = "col-md-8">
                             <input type="text" id="name" class = "inputField">
@@ -60,7 +67,7 @@
 
                     <div class = "form-group row" style = "padding: 0px 30px;">
                         <div class = "col-sm-3 offset-md-1">
-                            <label for="email" class = "color1">E-mail</label>
+                            <label for="email" class = "color2">E-mail</label>
                         </div>
                         <div class = "col-md-8">
                             <input type="text" id="email" class = "inputField">
@@ -69,7 +76,7 @@
 
                     <div class = "form-group row" style = "padding: 0px 30px;">
                         <div class = "col-sm-3 offset-md-1">
-                            <label for="message" class = "color1">Message</label>
+                            <label for="message" class = "color2">Message</label>
                         </div>
                         <div class = "col-md-8">
                             <textarea id="message" class = "inputField" style = "resize: none; overflow: auto; height: 10rem;"></textarea>
@@ -89,6 +96,10 @@
     <div class = "footer color3">
         Copyright Michael Becker 2020
     </div>
+
+    <!--My Javascript-->
+
+    <script src="floating_squares.js"></script>
 
     <!--Bootstrap Javascript-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

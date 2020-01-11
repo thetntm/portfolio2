@@ -20,6 +20,7 @@ body
     font-family: "retroFonts";
     display:flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 a {
@@ -50,16 +51,22 @@ a:hover
     margin-top: 2rem;
 }
 
+.color0
+{
+    border-color: #606e79;
+    color: #606e79;
+}
+
 .color1
 {
-    border-color: #7FFFEB;
-    color: #7FFFEB;
+    border-color: #9BA1F9;
+    color: #9BA1F9;
 }
 
 .color2
 {
-    border-color: #9BA1F9;
-    color: #9BA1F9;
+    border-color: #7FFFEB;
+    color: #7FFFEB;
 }
 
 .color3
@@ -71,11 +78,11 @@ a:hover
 .menu
 {
     float:right;
-    margin-top:23px;
+    margin-top:37px;
     font-size:18px;
 }
 
-.bigHeader
+#bigHeader
 {
     border-bottom: 2px solid #9BA1F9;
     overflow: auto;
@@ -89,8 +96,8 @@ a:hover
 
 h1
 {
-    display:inline;
-    margin-top: 20px;
+    display:inline-block;
+    margin-top: 15px;
     font-family:"retroHeader";
     font-size:60px;
 }
@@ -121,7 +128,7 @@ h1
 
 .menu-item
 {
-    display:inline;
+    display:inline-block;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -260,4 +267,16 @@ h2
     border: 2px solid #7FFFEB;
     color: #FF4A18;
     border-radius: 0px;
+}
+
+#particleParent
+{
+    position: relative;
+}
+
+.particleSquare
+{
+    position: absolute;
+    border: 1px solid;
+    z-index: -1;
 }

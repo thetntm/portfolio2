@@ -16,13 +16,13 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Main Container-->
-    <div class="bigHeader">
+    <!--Main Header-->
+    <div id="bigHeader">
         <div class="smallHeader">
             <a href="./index.html">
-                <h1 class="color1">Michael Becker</h1>
+                <h1 class="color2">Michael Becker</h1>
             </a>
-            <ul class = "menu color2">
+            <ul class = "menu color1">
                 
                 <li class = "menu-item" id="middle-menu-item">
                     <a href="./portfolio.html" class="unstyledLink">
@@ -39,9 +39,15 @@
         </div>
     </div>
 
+    <div id="particleParent">
+
+        <!--Background particles will (hopefully) appear here-->
+
+    </div>
+
     <!-- Main Content -->
-    <main>
-        <div class="container">
+    <main id="mainContent">
+        <div class="container" id = "contentContainer">
             <div class="row">
                 <div class="col-sm-4">
                     <img src="myFace.png" class="myFace" width="100%">
@@ -64,6 +70,10 @@
     <div class = "footer color3">
         Copyright Michael Becker 2020
     </div>
+
+    <!--My Javascript-->
+
+    <script src="floating_squares.js"></script>
 
     <!--Bootstrap Javascript-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
