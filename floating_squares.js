@@ -17,33 +17,31 @@ function createSquare()
         ),
         size: squareSize,
         color: Math.floor(Math.random() * 2),
-        element: document.createElement("div")
+        element: document.createElement("div"),
+        updateSquare: function() {
+            this.xPosition += this.xSpeed;
+            this.rotCurrent += this.rotSpeed;
+            this.rotCurrent %= 361;
+
+            if (this.xPosition > document.body.clientWidth + 50)
+            {
+                document.getElementById("particleParent").removeChild(this.element);
+                return false;
+            }
+
+            this.element.style = 
+            "top: " + this.yPosition + "px; " +
+            "left: " + this.xPosition + "px; " +
+            "transform: rotate(" + this.rotCurrent + "deg); " +
+            "height: " + this.size + "px; " +
+            "width: " + this.size + "px;";
+            return true;
+        }
     }
     newSquare.element.className = "particleSquare color" + newSquare.color;
     document.getElementById("particleParent").appendChild(newSquare.element);
 
     return newSquare;
-}
-
-function updateSquare(square)
-{
-    square.xPosition += square.xSpeed;
-    square.rotCurrent += square.rotSpeed;
-    square.rotCurrent %= 361;
-
-    if (square.xPosition > document.body.clientWidth + 50)
-    {
-        document.getElementById("particleParent").removeChild(square.element);
-        return false;
-    }
-
-    square.element.style = 
-    "top: " + square.yPosition + "px; " +
-    "left: " + square.xPosition + "px; " +
-    "transform: rotate(" + square.rotCurrent + "deg); " +
-    "height: " + square.size + "px; " +
-    "width: " + square.size + "px;";
-    return true;
 }
 
 function update()
@@ -53,7 +51,7 @@ function update()
     // if (spawnIteration == 80) {particleArray.push(createSquare());}
     
     for (let i = 0; i < particleArray.length; i++) {
-        if (!(updateSquare(particleArray[i])))
+        if (!(particleArray[i].updateSquare()))
         {
             particleArray.splice(i,1);
             particleArray.push(createSquare());
@@ -65,8 +63,6 @@ function update()
 var spawnIteration = 0;
 
 var particleArray = [createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare()];
-
-updateSquare(particleArray[0]);//this is safe because the square is all the way on the left, so it won't get removed. be careful when using updatesquare that you delete the square if it returns false!
 
 for (let i = 0; i < particleArray.length; i++)
 {
