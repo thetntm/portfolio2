@@ -1,9 +1,10 @@
 function createSquare()
 {
+    let squareSize = Math.round(Math.random() * 100) + 50;
     let newSquare = {
         xPosition: -150,
         yPosition: (
-            Math.random() * (document.getElementById("mainContent").scrollHeight - 150)
+            Math.random() * (document.getElementById("mainContent").scrollHeight - squareSize)
         ),
         xSpeed: (
             (Math.random() * 2) + 1 //the speed at which the item moves to the right.
@@ -14,7 +15,7 @@ function createSquare()
         rotSpeed: (
             (Math.random() * 2) - 1
         ),
-        size: Math.round(Math.random() * 100) + 50,
+        size: squareSize,
         color: Math.floor(Math.random() * 2),
         element: document.createElement("div")
     }

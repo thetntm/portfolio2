@@ -40,7 +40,6 @@ a:hover
     border:solid 2px;
     font-family: "retroFonts";
     padding:1rem;
-    margin:1rem;
     width:100%;
 }
 
@@ -139,6 +138,11 @@ main
 
 }
 
+.aboutRow
+{
+    margin-top:1rem;
+}
+
 .aboutMe
 {
     color: #7FFFEB;
@@ -157,18 +161,18 @@ main
     border: 2px solid #7FFFEB;
     font-family: "retroFonts";
     padding-top: 1rem;
-    margin:1rem;
 }
 
 @media screen and (max-width:575px)
 {
     .myFace
     {
-        width: 93%;
+        /* width: 93%; */
     }
     .aboutMe
     {
-        width: 93%;
+        /* width: 93%; */
+        margin-top:1rem;
     }
 }
 
