@@ -1,7 +1,7 @@
 function createSquare()
 {
     let newSquare = {
-        xPosition: -200,
+        xPosition: -150,
         yPosition: (
             Math.random() * (document.getElementById("mainContent").scrollHeight - 150)
         ),
@@ -30,7 +30,7 @@ function updateSquare(square)
     square.rotCurrent += square.rotSpeed;
     square.rotCurrent %= 361;
 
-    if (square.xPosition > document.body.clientWidth + 200)
+    if (square.xPosition > document.body.clientWidth + 50)
     {
         document.getElementById("particleParent").removeChild(square.element);
         return false;
@@ -47,23 +47,30 @@ function updateSquare(square)
 
 function update()
 {
-    spawnIteration ++;
-    spawnIteration %=81;
-    if (spawnIteration == 80) {particleArray.push(createSquare());}
+    // spawnIteration ++;
+    // spawnIteration %=81;
+    // if (spawnIteration == 80) {particleArray.push(createSquare());}
     
     for (let i = 0; i < particleArray.length; i++) {
         if (!(updateSquare(particleArray[i])))
         {
             particleArray.splice(i,1);
+            particleArray.push(createSquare());
         }
-      }
+    }
     
 }
 
 var spawnIteration = 0;
 
-var particleArray = [createSquare()];
+var particleArray = [createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare()];
 
 updateSquare(particleArray[0]);//this is safe because the square is all the way on the left, so it won't get removed. be careful when using updatesquare that you delete the square if it returns false!
+
+for (let i = 0; i < particleArray.length; i++)
+{
+    particleArray[i].xPosition = Math.random() * document.body.clientWidth;
+}
+
 
 var tick = setInterval(update,40);
