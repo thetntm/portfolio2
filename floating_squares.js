@@ -14,7 +14,7 @@ function createSquare()
         rotSpeed: (
             (Math.random() * 2) - 1
         ),
-        size: Math.round(Math.random() * 100) + 100,
+        size: Math.round(Math.random() * 100) + 50,
         color: Math.floor(Math.random() * 2),
         element: document.createElement("div")
     }
