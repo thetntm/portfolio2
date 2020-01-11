@@ -16,7 +16,7 @@ function createSquare()
             (Math.random() * 2) - 1
         ),
         size: squareSize,
-        color: Math.floor(Math.random() * 2),
+        color: 0,
         element: document.createElement("div"),
         updateSquare: function() {
             this.xPosition += this.xSpeed;
@@ -38,6 +38,24 @@ function createSquare()
             return true;
         }
     }
+
+    let luckyChance = Math.floor(Math.random()*99)
+
+    if (luckyChance == 3)
+    {
+        newSquare.color = 3; //gives a 1 in 100 chance that the new square will be a red one.
+    }
+
+    if (luckyChance % 33 == 1)
+    {
+        newSquare.color = 2; //gives a 1 in 50 chance that the new square will be a bright blue one.
+    }
+
+    if (luckyChance % 10 == 2)
+    {
+        newSquare.color = 1;
+    }
+
     newSquare.element.className = "particleSquare color" + newSquare.color;
     document.getElementById("particleParent").appendChild(newSquare.element);
 
@@ -62,7 +80,7 @@ function update()
 
 var spawnIteration = 0;
 
-var particleArray = [createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare()];
+var particleArray = [createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare()];
 
 for (let i = 0; i < particleArray.length; i++)
 {
