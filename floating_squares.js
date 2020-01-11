@@ -3,7 +3,7 @@ function createSquare()
     let newSquare = {
         xPosition: -200,
         yPosition: (
-            Math.random() * document.getElementById("mainContent").scrollHeight - 150
+            Math.random() * (document.getElementById("mainContent").scrollHeight - 150)
         ),
         xSpeed: (
             (Math.random() * 2) + 1 //the speed at which the item moves to the right.
@@ -29,8 +29,6 @@ function updateSquare(square)
     square.xPosition += square.xSpeed;
     square.rotCurrent += square.rotSpeed;
     square.rotCurrent %= 361;
-
-    console.log("test");
 
     if (square.xPosition > document.body.clientWidth + 200)
     {
