@@ -63,7 +63,7 @@ function update()
 
 var spawnIteration = 0;
 
-var particleArray = [createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare()];
+var particleArray = [createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare(), createSquare()];
 
 updateSquare(particleArray[0]);//this is safe because the square is all the way on the left, so it won't get removed. be careful when using updatesquare that you delete the square if it returns false!
 
