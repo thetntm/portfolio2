@@ -3,7 +3,7 @@ function createSquare()
     let newSquare = {
         xPosition: -200,
         yPosition: (
-            Math.random() * document.getElementById("mainContent").scrollHeight
+            Math.random() * document.getElementById("mainContent").scrollHeight - 150
         ),
         xSpeed: (
             (Math.random() * 2) + 1 //the speed at which the item moves to the right.
@@ -50,8 +50,8 @@ function updateSquare(square)
 function update()
 {
     spawnIteration ++;
-    spawnIteration %=100;
-    if (spawnIteration == 99) {particleArray.push(createSquare());}
+    spawnIteration %=81;
+    if (spawnIteration == 80) {particleArray.push(createSquare());}
     
     for (let i = 0; i < particleArray.length; i++) {
         if (!(updateSquare(particleArray[i])))
