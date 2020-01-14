@@ -23,6 +23,11 @@ function createSquare()
             this.rotCurrent += this.rotSpeed;
             this.rotCurrent %= 361;
 
+            if (this.yPosition > document.getElementById("mainContent").scrollHeight - squareSize)
+            {
+                this.yPosition = document.getElementById("mainContent").scrollHeight - squareSize;
+            }
+
             if (this.xPosition > document.body.clientWidth + 50)
             {
                 document.getElementById("particleParent").removeChild(this.element);
