@@ -101,7 +101,7 @@ h1
     font-size:60px;
 }
 
-@media screen and (max-width:828px)
+@media screen and (max-width:962px)
 {
     h1 {
         display:block;
@@ -160,7 +160,6 @@ main
 {
     border: 2px solid #7FFFEB;
     font-family: "retroFonts";
-    padding-top: 1rem;
 }
 
 @media screen and (max-width:575px)
@@ -194,7 +193,6 @@ h2
 {
     min-width: 230px;
     padding-bottom: 30px;
-
 }
 
 .portItem
@@ -232,9 +230,29 @@ h2
     background-image: url(./TwitchMesh.png);
 }
 
-#passGenItem
+#dayPlannerItem
 {
-    background-image: url(./mario.png);
+    background-image: url(./planner.png);
+}
+
+#weatherItem
+{
+    background-image: url(./sun.png);
+}
+
+#lyricItem
+{
+    background-image: url(./lyric.png);
+}
+
+#linkedinItem
+{
+    background-image: url(./in.png);
+}
+
+.repo-link
+{
+    text-align: center;
 }
 
 @media screen and (max-width: 768px)
